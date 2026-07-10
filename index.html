@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="GreenIEM - IEM, dongle DAC/AMP, amplifier, loa bookshelf và phụ kiện âm thanh cao cấp." />
+    <title>GreenIEM — Âm thanh tinh tế</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link data-trunk rel="sass" href="index.scss" />
+    <link data-trunk rel="icon" href="favicon.ico" />
+    <!--
+      __API_BASE__ points the WASM app at the backend. The container's
+      docker-entrypoint.sh generates /env.js from the API_BASE env var at
+      startup (see nginx/), so one image can be deployed against any backend
+      URL without rebuilding. In dev (trunk serve) /env.js doesn't exist and
+      this falls back to localhost.
+    -->
+    <script src="/env.js" onerror="void 0"></script>
+    <script>
+      window.__API_BASE__ = window.__API_BASE__ || "http://localhost:8080";
+    </script>
+  </head>
+  <body></body>
+</html>

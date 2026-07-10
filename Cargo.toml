@@ -1,0 +1,18 @@
+[package]
+name = "greeniem"
+version = "0.1.0"
+edition = "2024"
+description = "GreenIEM - website ban thiet bi am thanh (Yew frontend)"
+
+[dependencies]
+yew = { version = "0.23", features = ["csr"] }
+yew-router = "0.20"
+gloo-net = "0.6"
+gloo-storage = "0.3"
+gloo-timers = { version = "0.3", features = ["futures"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["HtmlInputElement", "HtmlTextAreaElement", "HtmlSelectElement", "Window"] }
