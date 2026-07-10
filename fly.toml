@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for greeniem on 2026-07-10T21:32:22Z
+# fly.toml app configuration file generated for greeniem on 2026-07-10T21:40:30Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'greeniem'
-primary_region = 'ams'
+primary_region = 'sin'
 
 [build]
   dockerfile = 'Dockerfile'
