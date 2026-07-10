@@ -3,30 +3,30 @@
 // ==========================================================================
 
 :root {
-  --bg-void: #0a0d0b;
-  --bg-panel: #10140f;
-  --bg-panel-2: #151c15;
-  --bg-elevated: #1a231b;
+  --bg-void: #161d18;
+  --bg-panel: #1c241e;
+  --bg-panel-2: #232d25;
+  --bg-elevated: #2a352c;
 
-  --metal-900: #06231a;
-  --metal-800: #0a2e21;
-  --metal-700: #0e3d2b;
-  --metal-600: #145238;
-  --metal-500: #1c6b47;
+  --metal-900: #0d3527;
+  --metal-800: #124030;
+  --metal-700: #17513b;
+  --metal-600: #1d6647;
+  --metal-500: #278058;
 
-  --accent: #29d98c;
-  --accent-bright: #6bffc0;
-  --accent-dim: #1f9e6b;
+  --accent: #2fe89a;
+  --accent-bright: #79ffc9;
+  --accent-dim: #26b378;
 
-  --silver: #a9b8b0;
-  --silver-dim: #6f8079;
+  --silver: #bcc9c1;
+  --silver-dim: #8a9a92;
 
-  --text-primary: #eef5f0;
-  --text-muted: #9fb3aa;
-  --text-faint: #6b7d74;
+  --text-primary: #f4faf6;
+  --text-muted: #b6c6bd;
+  --text-faint: #8b9c92;
 
-  --border-metal: rgba(170, 210, 190, 0.16);
-  --border-metal-strong: rgba(170, 210, 190, 0.32);
+  --border-metal: rgba(180, 218, 199, 0.2);
+  --border-metal-strong: rgba(180, 218, 199, 0.38);
 
   --danger: #ff6b6b;
   --warning: #ffc266;
@@ -180,6 +180,7 @@ button, input, textarea, select {
 }
 
 .gi-nav__inner {
+  position: relative;
   max-width: 1180px;
   margin: 0 auto;
   padding: 0.9rem 1.5rem;
@@ -238,6 +239,60 @@ button, input, textarea, select {
   border: 1px solid var(--border-metal-strong);
   border-radius: 999px;
   padding: 0.5rem 1rem;
+}
+
+.gi-nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--border-metal-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.gi-nav__toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+@media (max-width: 860px) {
+  .gi-nav__toggle {
+    display: flex;
+  }
+
+  .gi-nav__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-metal);
+    padding: 0.4rem 1.5rem 1rem;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .gi-nav__links--open {
+    display: flex;
+  }
+
+  .gi-nav__link {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-metal);
+    width: 100%;
+  }
 }
 
 .gi-cart-badge {
