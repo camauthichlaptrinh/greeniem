@@ -29,7 +29,6 @@ pub fn navbar() -> Html {
                             <span class="gi-cart-badge">{ count }</span>
                         }
                     </Link<Route>>
-                    <Link<Route> to={Route::AdminLogin} classes="gi-nav__link">{ "Admin" }</Link<Route>>
                 </div>
             </div>
         </header>
