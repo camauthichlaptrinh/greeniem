@@ -1,11 +1,15 @@
+# fly.toml app configuration file generated for greeniem on 2026-07-10T21:32:22Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'greeniem'
-primary_region = 'sin'
+primary_region = 'ams'
 
 [build]
   dockerfile = 'Dockerfile'
 
 [env]
-  # Overwrite with the deployed backend's URL, e.g. https://axum-greeniem.fly.dev
   API_BASE = 'https://axum-greeniem.fly.dev'
 
 [http_service]
@@ -27,3 +31,4 @@ primary_region = 'sin'
   memory = '256mb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
